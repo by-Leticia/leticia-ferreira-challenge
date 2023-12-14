@@ -8,8 +8,8 @@ const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 module.exports = {
   entry: './src/main.js',
   output: {
-    path: path.resolve(__dirname, './dist'),
     filename: 'bundle.js',
+    path: path.resolve(__dirname, './dist'),
     clean: true,
   },
   module: {
@@ -35,7 +35,7 @@ module.exports = {
       template: 'src/index.html',
     }),
     new EsLintPlugin(),
-    new MiniCssExtractPlugin({ filename: '[name].css' }),
+    new MiniCssExtractPlugin(),
   ],
   optimization: {
     minimizer: [new CssMinimizerPlugin()],
