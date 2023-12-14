@@ -1,5 +1,66 @@
-$body-color: red;
+$spacing-12: 12px;
+$bc-g1: #c4170c;
+@import url("https://fonts.googleapis.com/css2?family=Afacad:wght@700&display=swap");
 
-body{
-    color: $body-color;
+html {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    background-color: rgb(249, 249, 249);
+}
+header {
+    .barra_navegacao {
+        background-color: #ffff;
+        ul {
+            display: flex;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            li {
+                padding: $spacing-12 11px;
+                a {
+                    text-decoration: none;
+                    color: black;
+                }
+            }
+        }
+    }
+    .logo_g1 {
+        margin: 0;
+        height: 126px;
+        background: $bc-g1;
+        color: $bc-g1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        a {
+            text-decoration: none;
+            color: #ffff;
+            h1 {
+                font-family: "Afacad", sans-serif;
+                font-size: 70px;
+                margin: 0;
+            }
+        }
+        fieldset {
+            background: #00000026;
+            border-style: none;
+            display: flex;
+            align-items: center;
+            position: relative;
+            left: 35rem;
+            border-radius: 3px;
+            input {
+                width: 100%;
+                height: 30px;
+                margin-left: 5px;
+                background: #00000000;
+                color: #ffffff;
+                font-family: "Afacad", sans-serif;
+                font-weight: 900;
+                border-style: none;
+            }
+        }
+    }
 }
