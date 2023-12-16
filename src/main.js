@@ -1,17 +1,19 @@
 import './style.scss';
 
 const fieldset = document.querySelector('fieldset');
-const barraNova = document.querySelector('.barra_navegacao');
+const input = document.querySelector('#buscar-campo');
+const background = document.querySelector('.dropdownBackground');
 
-function search() {
+function acionaInput() {
   fieldset.classList.add('click_input');
-  console.log('entrou');
+  background.classList.add('open');
 }
 
-function outSearch() {
+function retiraInput() {
   fieldset.classList.remove('click_input');
-  console.log('saiu');
+  background.classList.remove('open');
 }
 
-fieldset.addEventListener('click', search);
-barraNova.addEventListener('click', outSearch);
+window.onclick = (e) => {
+  e.target === input ? acionaInput() : retiraInput();
+};

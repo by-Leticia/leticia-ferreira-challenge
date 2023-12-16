@@ -12,3 +12,11 @@
         <li>comecei a fazer alguns testes de como ficaria aquela caixa de pesquisa que aparece embaixo toda vez que o usuário digita, mas não deixei nada salvo por ser somente testes/"mapeamento".</li>
         <li>percebi que o erro de FOUC (Flash of Unstyled Content) tinha voltado e voltei a analisar a configuração, até perceber que o erro se dá quando após lançar o npm run dev no console e dar um ctrl c quando coloco npm run dev novamente no console ele começa a dar o problema de FOUC mas quando eu paro o projeto a partir do ctrl z e rodo o npm run dev novamente o erro FOUC não acontece.</li>
     </ul>
+<h1>Dia 3 (15 de Dezembro)</h1>
+    <ul>
+        <li>enxuguei o javascript que tinha construido para que o efeito do input de busca expandisse e trocasse de cor, minha tentaiva foi bem sucedida mas queria tornar o if normal em um if ternario mas o eslint não deixa estou fazendo algumas pesquisas para tentar contornar isso</li>
+        <li>consultei o jeff para verificar se tinha alguma forma de colocar esse if ternaio sem mexer na configuração mas não achamos, o jeito foi mexer nas configurações e dentro das rules do .eslint.js colocar "'no-unused-expressions': 'off',"</li>
+        <li>Adicionei a box que fica embaixo do input quando ele é clicado e adicionei o evento quefaz ele sumir quando o usuário clica fora</li>
+        <li>voltei a perceber o problema de FOUC e se não achar a solução definitiva vou procurar ajuda de alguém do time</li>
+        <li>queria ter avançado com mais coisas mas tivemos hoje a confraternização do g1 e não consegui pois tive que sair cedo de casa, mas pretendo compensar</li>
+    </ul>
