@@ -1,6 +1,6 @@
 <h1>Dia 1 (13 de Dezembro)</h1>
     <ul>
-        <li>instalei todas as dependências e configurei tudo o que precisava (webpack, EsLint, babel e sass). preferi fazer alguns testes antes em outras pastas para mapear se realmente entendi as tecnologias citadas e suas respctivas instalações e configurações. por fim deu tudo certo</li>
+        <li>instalei todas as dependências e configurei tudo o que precisava (webpack, EsLint, babel e sass). preferi fazer alguns testes antes em outras pastas para mapear se realmente entendi as tecnologias citadas e suas respectivas instalações e configurações. por fim deu tudo certo</li>
         <li>comecei o html e css me baseando na tela inicial do g1, adicionei a barra nova e pretendo futuramente torna-la mais próximo da original (atualmente os itens estão alinhados mas sem cor estão todos com a fonte de cor preta), adicionei o icone/input de busca e estilizei para que ficasse mais parecido com a home do g1, também adicionei a logo do g1 no meio da barra e clicando nela você é direcionado ao site original</li>
         <li>percebi que o projeto estava com problema de FOUC (Flash of Unstyled Content), depois de debugar percebi que o problema era no webpack.config.js no plugin new MiniCssExtractPlugin() eu havia adicionado dentro dos parenteses um "parametro" que estava causando o FOUC </li>
         <li>futuramente pretendo adicionar um footer com meu nome, o ano que realizei o projeto e algum icon fofo</li>
@@ -14,9 +14,15 @@
     </ul>
 <h1>Dia 3 (15 de Dezembro)</h1>
     <ul>
-        <li>enxuguei o javascript que tinha construido para que o efeito do input de busca expandisse e trocasse de cor, minha tentaiva foi bem sucedida mas queria tornar o if normal em um if ternario mas o eslint não deixa estou fazendo algumas pesquisas para tentar contornar isso</li>
-        <li>consultei o jeff para verificar se tinha alguma forma de colocar esse if ternaio sem mexer na configuração mas não achamos, o jeito foi mexer nas configurações e dentro das rules do .eslint.js colocar "'no-unused-expressions': 'off',"</li>
-        <li>Adicionei a box que fica embaixo do input quando ele é clicado e adicionei o evento quefaz ele sumir quando o usuário clica fora</li>
+        <li>enxuguei o javascript que tinha construido para que o efeito do input de busca expandisse e trocasse de cor, minha tentativa foi bem sucedida mas queria tornar o if normal em um if ternario mas o eslint não deixa estou fazendo algumas pesquisas para tentar contornar isso</li>
+        <li>consultei o jeff para verificar se tinha alguma forma de colocar esse if ternario sem mexer na configuração mas não achamos, o jeito foi mexer nas configurações e dentro das rules do .eslint.js colocar "'no-unused-expressions': 'off',"</li>
+        <li>Adicionei a box que fica embaixo do input quando ele é clicado e adicionei o evento que faz ele sumir quando o usuário clica fora</li>
         <li>voltei a perceber o problema de FOUC e se não achar a solução definitiva vou procurar ajuda de alguém do time</li>
         <li>queria ter avançado com mais coisas mas tivemos hoje a confraternização do g1 e não consegui pois tive que sair cedo de casa, mas pretendo compensar</li>
+    </ul>
+<h1>Dia 3 (18 de Dezembro)</h1>
+    <ul>
+        <li>estudei o problema de FOUC: percebi que o problema não aparece se você dá um build e logo em seguida o npm run dev, mas após a primeira alteração o problema aparece novamente</li>
+        <li>passei quase o dia todo pesquisando sobre como implementar o live search e fazendo alguns testes que não deram o resultado esperado</li>
+        <li>adicionei o arquivo exemplo.json</li>
     </ul>

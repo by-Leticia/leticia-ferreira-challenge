@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Afacad:wght@700&family=Outfit:wght@300&display=swap");
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #f9f9f9;
+}
+
+header .dropdownBackground {
+  width: 238px;
+  height: 190px;
+  position: absolute;
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0 50px 100px rgba(50, 50, 93, 0.1), 0 15px 35px rgba(50, 50, 93, 0.15), 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s, opacity 0.5s, transform 0.2s;
+  transform-origin: 50% 0;
+  display: flex;
+  justify-content: center;
+  left: 81%;
+  top: 17%;
+  opacity: 0;
+}
+header .dropdownBackground.open {
+  opacity: 1;
+}
+header .arrow {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  display: block;
+  background: white;
+  transform: translateY(-50%) rotate(45deg);
+}
+header .search_results {
+  display: flex;
+  position: relative;
+  right: 38%;
+  font-family: "Outfit", sans-serif;
+}
+header .barra_navegacao {
+  background-color: white;
+}
+header .barra_navegacao ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+header .barra_navegacao ul li {
+  padding: 12px 11px;
+  font-family: "Afacad", sans-serif;
+}
+header .barra_navegacao ul li a {
+  text-decoration: none;
+}
+header .barra_navegacao ul li a:hover {
+  position: relative;
+  top: 15%;
+  border-bottom: 2px solid;
+  border-radius: 2px;
+}
+header .logo_g1 {
+  margin: 0;
+  height: 126px;
+  background: #c4170c;
+  color: #c4170c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header .logo_g1 a {
+  text-decoration: none;
+  color: white;
+}
+header .logo_g1 a h1 {
+  font-family: "Afacad", sans-serif;
+  font-size: 70px;
+  margin: 0;
+}
+header .logo_g1 fieldset {
+  transition: all 0.5s;
+  background: rgba(0, 0, 0, 0.1490196078);
+  border-style: none;
+  display: flex;
+  align-items: center;
+  position: relative;
+  left: 33rem;
+  border-radius: 3px;
+}
+header .logo_g1 fieldset input {
+  transition: all 0.5s;
+  width: 100%;
+  height: 30px;
+  margin-left: 5px;
+  background: rgba(0, 0, 0, 0);
+  font-family: "Afacad", sans-serif;
+  font-weight: 900;
+  border-style: none;
+}
+
+.click_input {
+  transition: all 0.5s;
+  border-radius: 5px;
+  background: white !important;
+}
+.click_input input {
+  width: 190px !important;
+  transition: all 0.5s;
+  color: #000000;
+}
+.click_input path {
+  fill: rgba(0, 0, 0, 0.2509803922) !important;
+}/*# sourceMappingURL=style.css.map */

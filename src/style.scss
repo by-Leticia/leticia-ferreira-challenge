@@ -1,6 +1,6 @@
 $spacing-12: 12px;
 $bc-g1: #c4170c;
-@import url("https://fonts.googleapis.com/css2?family=Afacad:wght@700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Afacad:wght@700&family=Outfit:wght@300&display=swap');
 
 html {
     box-sizing: border-box;
@@ -16,7 +16,8 @@ header {
         position: absolute;
         background: #fff;
         border-radius: 4px;
-        box-shadow: 0 50px 100px rgba(50, 50, 93, .1), 0 15px 35px rgba(50, 50, 93, .15), 0 5px 15px rgba(0, 0, 0, .1);
+        box-shadow: 0 50px 100px rgba(50, 50, 93, 0.1), 0 15px 35px rgba(50, 50, 93, 0.15),
+            0 5px 15px rgba(0, 0, 0, 0.1);
         transition: all 0.3s, opacity 0.5s, transform 0.2s;
         transform-origin: 50% 0;
         display: flex;
@@ -35,6 +36,12 @@ header {
         display: block;
         background: white;
         transform: translateY(-50%) rotate(45deg);
+    }
+    .search_results {
+        display: flex;
+        position: relative;
+        right: 38%;
+        font-family: 'Outfit', sans-serif;
     }
     .barra_navegacao {
         background-color: #ffff;
@@ -90,7 +97,7 @@ header {
                 height: 30px;
                 margin-left: 5px;
                 background: #00000000;
-                color: #ffffff;
+                // color: #ffffff;
                 font-family: "Afacad", sans-serif;
                 font-weight: 900;
                 border-style: none;
