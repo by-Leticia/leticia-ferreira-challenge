@@ -33,6 +33,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: 'src/index.html',
+      inject: 'body',
     }),
     new EsLintPlugin(),
     new MiniCssExtractPlugin(),

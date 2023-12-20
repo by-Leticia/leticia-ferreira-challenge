@@ -20,9 +20,13 @@
         <li>voltei a perceber o problema de FOUC e se não achar a solução definitiva vou procurar ajuda de alguém do time</li>
         <li>queria ter avançado com mais coisas mas tivemos hoje a confraternização do g1 e não consegui pois tive que sair cedo de casa, mas pretendo compensar</li>
     </ul>
-<h1>Dia 3 (18 de Dezembro)</h1>
+<h1>Dia 4 (18 de Dezembro)</h1>
     <ul>
         <li>estudei o problema de FOUC: percebi que o problema não aparece se você dá um build e logo em seguida o npm run dev, mas após a primeira alteração o problema aparece novamente</li>
         <li>passei quase o dia todo pesquisando sobre como implementar o live search e fazendo alguns testes que não deram o resultado esperado</li>
         <li>adicionei o arquivo exemplo.json</li>
     </ul>
+<h1>Dia 5 (19 de Dezembro)</h1>
+    <li>mais um dia avançando com os estudos sobre como implementar o live search, fiz alguns micros avanços mas ainda não cheguei ao resultado esperado.</li>
+    <li>consultei o jeff sobre o problema de FOUC e ele me recomendou "no arquivo do webpack no new HtmlWebpackPlugin, adiciona abaixo de template: inject: 'body', // ou 'head'", fiz esse teste mas acabou não gerando resultado. percebi que o problema de fouc está intermitente.</li>
+    <li>jeff também recomendou "deveria fazer um script de watch onde cada vez que vc salva um arquivo ele faz o build do js e scss", pretendo testar isso amanhã</li>

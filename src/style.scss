@@ -1,6 +1,6 @@
 $spacing-12: 12px;
 $bc-g1: #c4170c;
-@import url('https://fonts.googleapis.com/css2?family=Afacad:wght@700&family=Outfit:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Afacad:wght@700&family=Outfit:wght@300&display=swap");
 
 html {
     box-sizing: border-box;
@@ -41,7 +41,7 @@ header {
         display: flex;
         position: relative;
         right: 38%;
-        font-family: 'Outfit', sans-serif;
+        font-family: "Outfit", sans-serif;
     }
     .barra_navegacao {
         background-color: #ffff;
@@ -117,4 +117,10 @@ header {
     path {
         fill: #00000040 !important;
     }
+}
+p {
+    color: purple;
+    position: relative;
+    top: 5%;
+    left: 25%;
 }
