@@ -30,3 +30,9 @@
     <li>mais um dia avançando com os estudos sobre como implementar o live search, fiz alguns micros avanços mas ainda não cheguei ao resultado esperado.</li>
     <li>consultei o jeff sobre o problema de FOUC e ele me recomendou "no arquivo do webpack no new HtmlWebpackPlugin, adiciona abaixo de template: inject: 'body', // ou 'head'", fiz esse teste mas acabou não gerando resultado. percebi que o problema de fouc está intermitente.</li>
     <li>jeff também recomendou "deveria fazer um script de watch onde cada vez que vc salva um arquivo ele faz o build do js e scss", pretendo testar isso amanhã</li>
+<h1>Dia 6 (20 de Dezembro)</h1>
+    <li>dia de evento no escritório, mexi em algumas coisas no scss mas não consegui avançar tanto</li>
+<h1>Dia 7 (20 de Dezembro)</h1>
+    <li>avancei com alguns pontos simples da estilização</li>
+    <li>me reuni com o jeff para poder ter alguma ajuda em relação ao live search, ele foi me auxiliando e juntos fomos avançando. consegui entender muito bem como fazer e por fim tive resultado positivo :partying_face: :tada: :crying-matheus: :pepelove: :emocionado: amanhã irei avançar com a parte colocar tudo no html, ajeitar a estilização e os outros pontos do desafio</li>
+    <li>para melhorar o desenvolvimento instalamos o prettier e para que tudo rodasse corretamente desabilitamos algumas coisas do eslint pois estavam impedindo que tudo funcionasse</li>

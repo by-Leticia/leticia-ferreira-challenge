@@ -11,8 +11,8 @@ body {
 }
 header {
     .dropdownBackground {
-        width: 238px;
-        height: 190px;
+        width: 20rem;
+        height: 250px;
         position: absolute;
         background: #fff;
         border-radius: 4px;
@@ -22,8 +22,12 @@ header {
         transform-origin: 50% 0;
         display: flex;
         justify-content: center;
-        left: 81%;
-        top: 17%;
+        left: 80%;
+        top: 13%;
+        @media (max-width: 640px){
+            left: 15%;
+            top: 31%
+        }
         opacity: 0;
     }
     .dropdownBackground.open {
@@ -42,6 +46,18 @@ header {
         position: relative;
         right: 38%;
         font-family: "Outfit", sans-serif;
+        img{
+            display: none;
+            height: 50px;
+            position: fixed;
+            left:  96.5rem;
+            top: 9.5rem;
+        }
+        h2{
+            display: block;
+            position: fixed;
+            left: 101rem;
+        }
     }
     .barra_navegacao {
         background-color: #ffff;
@@ -64,6 +80,9 @@ header {
                 }
             }
         }
+        @media (max-width: 640px) {
+            display: none;
+        }
     }
     .logo_g1 {
         margin: 0;
@@ -73,6 +92,9 @@ header {
         display: flex;
         align-items: center;
         justify-content: center;
+        @media (max-width: 640px) {
+            height: 150px;
+        }
         a {
             text-decoration: none;
             color: #ffff;
@@ -80,6 +102,11 @@ header {
                 font-family: "Afacad", sans-serif;
                 font-size: 70px;
                 margin: 0;
+                @media (max-width: 640px) {
+                    display: block;
+                    position: relative;
+                    left: 40%;
+                }
             }
         }
         fieldset {
@@ -89,7 +116,11 @@ header {
             display: flex;
             align-items: center;
             position: relative;
-            left: 33rem;
+            left: 44rem;
+            @media (max-width: 640px) {
+                left: -2rem;
+                top: 5rem;
+            }
             border-radius: 3px;
             input {
                 transition: all 0.5s;
@@ -101,6 +132,9 @@ header {
                 font-family: "Afacad", sans-serif;
                 font-weight: 900;
                 border-style: none;
+                @media (max-width:640px) {
+                    display: none;
+                }
             }
         }
     }
@@ -110,6 +144,7 @@ header {
     border-radius: 5px;
     background: white !important;
     input {
+        display: flex !important;
         width: 190px !important;
         transition: all 0.5s;
         color: #000000;
