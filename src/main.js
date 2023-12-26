@@ -6,21 +6,22 @@ import mock from './exemplo';
 const fieldset = document.querySelector('fieldset');
 const input = document.querySelector('#buscar-campo');
 const background = document.querySelector('.dropdownBackground');
-// const results = document.querySelector('.search_results');
-const oldLogo = document.querySelector('.old_logo');
-// const title = document.querySelector('.title');
-// let json = require('./exemplo.json');
+const title = document.querySelector('.title');
+const logo = document.querySelector('.logo');
+const searchGlobo = document.querySelector('.searchGlobo');
+// const suggestions = document.querySelector('.suggestions');
 
 function acionaInput() {
   fieldset.classList.add('click_input');
   background.classList.add('open');
-  oldLogo.style.display = 'block';
 }
 
 function retiraInput() {
   fieldset.classList.remove('click_input');
   background.classList.remove('open');
-  oldLogo.style.display = 'none';
+  input.value = '';
+  title.innerHTML = '';
+  logo.src = '';
 }
 
 window.onclick = (e) => {
@@ -77,5 +78,15 @@ input.addEventListener('keyup', debounce(() => {
   if (input.value.length >= 1) {
     getResultsSearch(formatarPalavra(input.value));
     console.log(getResultsSearch(formatarPalavra(input.value)));
+    title.innerHTML = getResultsSearch(formatarPalavra(input.value)).highlight.title;
+    logo.src = getResultsSearch(formatarPalavra(input.value)).highlight.logo;
+    searchGlobo.innerHTML = `buscar ${input.value} na Globo.com`;
   }
+  input.addEventListener('keypress', (event) => {
+    if (event.key === 'Enter') {
+      event.preventDefault();
+      console.log('oiiii');
+      window.location.href = getResultsSearch(formatarPalavra(input.value)).highlight.url;
+    }
+  });
 }, 500));

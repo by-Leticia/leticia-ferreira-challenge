@@ -1,49 +1,102 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>O desafio</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <header>
-        <div class="dropdownBackground">
-            <span class="arrow"></span>
-            <div class="search_results">
-                <img class="old_logo" src="http://s.glbimg.com/bu/i/fc/5fb2e18d-a47f-4bb8-9a7e-b66871cf53c0.png" alt="">
-                <h2 class="title"></h2>
-            </div>
+      <div class="dropdownBackground">
+        <span class="arrow"></span>
+        <div class="highlights content">
+          <button>
+            <img class="highlight logo" src="" alt="" />
+            <h2 class="highlights title"><a class="link" href=""></a></h2>
+          </button>
+          <hr class="highlights one" />
+          <i class="highlights">Sugestão de busca</i>
+          <ul class="suggestions"></ul>
+          <hr class="highlights two" />
+          <a class="highlights searchGlobo"></a>
+          <a class="highlights searchWeb"></a>
         </div>
-        <div class="barra_navegacao">
-            <ul>
-                <li><a id="globocom" style="color: #0669DE;" href="https://www.globo.com/">globo.com</a></li>
-                <li><a id="g1" style="color: #c4170c;" href="">g1</a></li>
-                <li><a id="ge" style="color: #06AA48;" href="https://ge.globo.com/">ge</a></li>
-                <li><a id="gshow" style="color: #FF6700;" href="https://gshow.globo.com/">gshow</a></li>
-                <li><a id="globoplay" style="color: #FB0334;" href="https://globoplay.globo.com/">globoplay</a></li>
-                <li><a id="globo" style="color: #1E4C9A;" href="https://oglobo.globo.com/">o globo</a></li>
-                <li><a id="guia" style="color: #c4170c;" href="https://g1.globo.com/guia/guia-de-compras/">guia de
-                        compras</a></li>
-            </ul>
-        </div>
-        <div class="logo_g1">
-            <a href="https://g1.globo.com/">
-                <h1>g1</h1>
-            </a>
-            <form name="busca-padrao">
-                <fieldset>
-                    <svg xmlns="http://www.w3.org/2000/svg" height="16" width="16"
-                        viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.-->
-                        <path fill="#ffffff"
-                            d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
-                    </svg>
-                    <input placeholder="BUSCAR" type="search" autocomplete="off" id="buscar-campo">
-                </fieldset>
-            </form>
-        </div>
+      </div>
+      <div class="barra_navegacao">
+        <ul>
+          <li>
+            <a
+              id="globocom"
+              style="color: #0669de"
+              href="https://www.globo.com/"
+              >globo.com</a
+            >
+          </li>
+          <li><a id="g1" style="color: #c4170c" href="">g1</a></li>
+          <li>
+            <a id="ge" style="color: #06aa48" href="https://ge.globo.com/"
+              >ge</a
+            >
+          </li>
+          <li>
+            <a id="gshow" style="color: #ff6700" href="https://gshow.globo.com/"
+              >gshow</a
+            >
+          </li>
+          <li>
+            <a
+              id="globoplay"
+              style="color: #fb0334"
+              href="https://globoplay.globo.com/"
+              >globoplay</a
+            >
+          </li>
+          <li>
+            <a
+              id="globo"
+              style="color: #1e4c9a"
+              href="https://oglobo.globo.com/"
+              >o globo</a
+            >
+          </li>
+          <li>
+            <a
+              id="guia"
+              style="color: #c4170c"
+              href="https://g1.globo.com/guia/guia-de-compras/"
+              >guia de compras</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="logo_g1">
+        <a href="https://g1.globo.com/">
+          <h1>g1</h1>
+        </a>
+        <form name="busca-padrao">
+          <fieldset>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="16"
+              width="16"
+              viewBox="0 0 512 512"
+            >
+              <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.-->
+              <path
+                fill="#ffffff"
+                d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"
+              />
+            </svg>
+            <input
+              placeholder="BUSCAR"
+              type="search"
+              autocomplete="off"
+              id="buscar-campo"
+            />
+          </fieldset>
+        </form>
+      </div>
     </header>
-</body>
-
+  </body>
 </html>
