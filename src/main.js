@@ -9,7 +9,8 @@ const background = document.querySelector('.dropdownBackground');
 const title = document.querySelector('.title');
 const logo = document.querySelector('.logo');
 const searchGlobo = document.querySelector('.searchGlobo');
-// const suggestions = document.querySelector('.suggestions');
+const upDown = document.querySelectorAll('.highlights');
+let seletedIndex = 0;
 
 function acionaInput() {
   fieldset.classList.add('click_input');
@@ -74,6 +75,18 @@ function getResultsSearch(palavra) {
   return result;
 }
 
+function updateMenuAppearance() {
+  upDown.forEach((item, index) => {
+    if (index === seletedIndex) {
+      item.classList.add('selected');
+      console.log('selected add');
+    } else {
+      item.classList.remove('selected');
+      console.log('selected remove');
+    }
+  });
+}
+
 input.addEventListener('keyup', debounce(() => {
   if (input.value.length >= 1) {
     getResultsSearch(formatarPalavra(input.value));
@@ -90,3 +103,22 @@ input.addEventListener('keyup', debounce(() => {
     }
   });
 }, 500));
+
+document.addEventListener('keydown', (event) => {
+  // eslint-disable-next-line default-case
+  switch (event.key) {
+    case 'ArrowUp':
+      seletedIndex = Math.max(0, seletedIndex - 1);
+      console.log('arrowUP');
+      break;
+    case 'ArrowDown':
+      seletedIndex = Math.min(upDown.length - 1, seletedIndex + 1);
+      console.log('arrowDown');
+      break;
+    case 'Enter':
+      console.log('iiiiii');
+      upDown[seletedIndex].click();
+      break;
+  }
+  updateMenuAppearance();
+});

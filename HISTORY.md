@@ -47,5 +47,10 @@
         <li>Dia 22 de Dezembro não consegui avançar em nada com o projeto por conta da reunião de QP que acabou tomando o dia todo e durante o fim de semana por conta do natal não cosegui mexer em nada no projeto, essa semana pretendo terminar o projeto por completo</li>
         <li>consegui avançar com alguns itens do projeto, agora quando digita o title ou uma das queries aparece o respectivo item com titulo e a imagem ao lado que quando aperta o enter ele direciona para a respectiva página</li>
         <li>ajeitei alguns itens do sass tornando a página mais agradável, adicionei a parte de sugestão de busca e a parte que fica embaixo (para tudo isso usei a imagem que me foi dada de referência)</li>
-        <li>amanhã pretendo avançar com os outros itens do projeto (principalmente a parte de navegação pelas setas</li>
+        <li>amanhã pretendo avançar com os outros itens do projeto (principalmente a parte de navegação pelas setas)</li>
+    </ul>
+<h1>Dia 9 (27 de Dezembro)</h1>
+    <ul>
+        <li>avançando com mais alguns itens do css, agora quando o usuário terminar de digitar o que precisa e quiser apertar a seta para baixou ou a de cima para selecionar um dos items vai ser possivel</li>
+        <li>percebi que quando eu apago o que escrevi o resultado continua lá, por exemplo: se eu digitar neymar e depois apagar o rsultado neymar ainda irá aparecer. Pretendo resolver isso amanhã</li>
     </ul>
