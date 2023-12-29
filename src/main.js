@@ -10,7 +10,10 @@ const title = document.querySelector('.title');
 const logo = document.querySelector('.logo');
 const searchGlobo = document.querySelector('.searchGlobo');
 const upDown = document.querySelectorAll('.highlights');
+const searchWeb = document.querySelector('.searchWeb');
+const divSugestao = document.querySelector('.suggestions');
 let seletedIndex = 0;
+// const listaSemMarcação = mock.suggestions.map((item) => `- ${item}`).join('\n');
 
 function acionaInput() {
   fieldset.classList.add('click_input');
@@ -79,10 +82,8 @@ function updateMenuAppearance() {
   upDown.forEach((item, index) => {
     if (index === seletedIndex) {
       item.classList.add('selected');
-      console.log('selected add');
     } else {
       item.classList.remove('selected');
-      console.log('selected remove');
     }
   });
 }
@@ -94,12 +95,21 @@ input.addEventListener('keyup', debounce(() => {
     title.innerHTML = getResultsSearch(formatarPalavra(input.value)).highlight.title;
     logo.src = getResultsSearch(formatarPalavra(input.value)).highlight.logo;
     searchGlobo.innerHTML = `buscar ${input.value} na Globo.com`;
+    searchWeb.innerHTML = `buscar ${input.value} na Web`;
+    const frases = `${getResultsSearch(formatarPalavra(input.value)).suggestion}`;
+    const elementos = frases.split(',');
+    let listaHTML = '<ul>';
+    elementos.forEach((elemento) => {
+      listaHTML += `<li class="suggestions">${elemento} <br> </li`;
+    });
+    listaHTML += '</ul>';
+    divSugestao.innerHTML = listaHTML;
   }
   input.addEventListener('keypress', (event) => {
     if (event.key === 'Enter') {
       event.preventDefault();
-      console.log('oiiii');
-      window.location.href = getResultsSearch(formatarPalavra(input.value)).highlight.url;
+      console.log(event);
+      //
     }
   });
 }, 500));
@@ -109,14 +119,18 @@ document.addEventListener('keydown', (event) => {
   switch (event.key) {
     case 'ArrowUp':
       seletedIndex = Math.max(0, seletedIndex - 1);
-      console.log('arrowUP');
       break;
     case 'ArrowDown':
       seletedIndex = Math.min(upDown.length - 1, seletedIndex + 1);
-      console.log('arrowDown');
       break;
     case 'Enter':
-      console.log('iiiiii');
+      upDown.forEach((item) => {
+        if (item === title) {
+          window.location.href = getResultsSearch(formatarPalavra(input.value)).highlight.url;
+        } else {
+          console.log('not title');
+        }
+      });
       upDown[seletedIndex].click();
       break;
   }

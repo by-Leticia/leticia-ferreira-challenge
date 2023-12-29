@@ -11,8 +11,8 @@ body {
 }
 header {
     .dropdownBackground {
-        width: 20rem;
-        height: 250px;
+        width: 23rem;
+        height: 310px;
         position: absolute;
         background: #fff;
         border-radius: 4px;
@@ -37,26 +37,18 @@ header {
             background: white;
             transform: translateY(-50%) rotate(45deg);
         }
-        .highlights {
+        .decoration {
             display: block;
             position: fixed;
-            width: 16.5%;
+            right: 16px;
+            width: 19%;
             margin: 0;
             color: #686161df;
             .one {
-                right: 64px;
                 top: 251px;
             }
             .two {
-                right: 64px;
                 top: 350px;
-            }
-            h2 {
-                display: block;
-                bottom: 79%;
-                width: fit-content;
-                left: 86%;
-                color: #000000;
             }
             img {
                 display: block;
@@ -67,10 +59,24 @@ header {
             }
             i {
                 display: block;
-                left: 90%;
+                left: 92.5%;
                 top: 24.5%;
                 width: fit-content;
                 color: #686161df;
+            }
+        }
+        .highlights {
+            display: block;
+            position: fixed;
+            width: 16.5%;
+            margin: 0;
+            color: #686161df;
+            h2 {
+                display: block;
+                bottom: 79%;
+                width: fit-content;
+                left: 86%;
+                color: #000000;
             }
             a {
                 display: block;
@@ -80,10 +86,18 @@ header {
                 color: #060606df;
                 width: fit-content;
             }
-            li {
-                list-style: none;
-                display: flex;
+            .searchWeb {
+                top: 377px;
+                left: 97.5rem;
             }
+        }
+        .suggestions {
+            list-style: none;
+            position: fixed;
+            top: 26%;
+            left: 81%;
+            color: black;
+            font-size: 20px;
         }
     }
     .dropdownBackground.open {

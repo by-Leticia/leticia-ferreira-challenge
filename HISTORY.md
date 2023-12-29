@@ -54,3 +54,9 @@
         <li>avançando com mais alguns itens do css, agora quando o usuário terminar de digitar o que precisa e quiser apertar a seta para baixou ou a de cima para selecionar um dos items vai ser possivel</li>
         <li>percebi que quando eu apago o que escrevi o resultado continua lá, por exemplo: se eu digitar neymar e depois apagar o rsultado neymar ainda irá aparecer. Pretendo resolver isso amanhã</li>
     </ul>
+<h1>Dia 10 (28 de Dezembro)</h1>
+    <ul>
+        <li>acabei esquecendo de fazer o deploy no dia 28 entãoestou fazendo no dia 29 de manhã</li>
+        <li>consegui fazer as sugestões aparecerem abaixo do title, ainda precisa de algumas melhorias</li>
+        <li>melhorei a parte do código que faz o usuário ser direcionado para a respectiva url do title quando aperta o enter</li>
+    </ul>
