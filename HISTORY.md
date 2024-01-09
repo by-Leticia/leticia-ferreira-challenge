@@ -56,7 +56,27 @@
     </ul>
 <h1>Dia 10 (28 de Dezembro)</h1>
     <ul>
-        <li>acabei esquecendo de fazer o deploy no dia 28 entãoestou fazendo no dia 29 de manhã</li>
+        <li>acabei esquecendo de fazer o deploy no dia 28 então estou fazendo no dia 29 de manhã</li>
         <li>consegui fazer as sugestões aparecerem abaixo do title, ainda precisa de algumas melhorias</li>
         <li>melhorei a parte do código que faz o usuário ser direcionado para a respectiva url do title quando aperta o enter</li>
+    </ul>
+<h1>Dia 11 (29 de Dezembro)<h1>
+    <ul>
+        <li>acabei esquecendo de documentar :( </li>
+    </ul>
+<h1>Dia 12 (02 de Janeiro)<h1>
+    <ul>
+        <li>continuei na saga de tornar o projeto responsivo =</li>
+        <li></li>
+    </ul>
+<h1>Dia ? (8 de Janeiro)</h1>
+    <ul>
+        <li>me perdi nos registros os dias e como sempre faço "deploy" a noite alguns dias eu esquecia de subir no github e de anotar aqui. Muito por conta das questões que eu precisava resolver (fazer o live search funcionar, a questão com as sugestões e etc) as vezes ficava muito focada em resolver/ pesquisar as soluções e a parte mais "burocratica" acabava sendo um pouco esquecida por mim (reconheço esse erro e pretendo melhorar)</li>
+    </ul>
+<h1>Considerações Gerais</h1>
+<h2>Separando por partes:</h2>
+    <ul>
+        <li>Visualmente: a parte de css/scss não foi tão dificil de montar acabei pegando o site do g1 de inspiração, mas sinto que poderia ter um tchan a mais (realmente eu não sirvo para ux kkkkk)</li>
+        <li>Javascript: Pessoalmente achei muito interessante contruir tudo isso, sinto que se eu tivesse um pouco mais de experiência poderia ter sido um projeto muito mais explorado e com outras funcionalidades.</li>
+        <li>Configurações: não acho que as configurações foram um real problema, acredito que a falta de experiência com webpack, eslint e babel que acabam alterando na configuração final</li>
     </ul>

@@ -9,15 +9,13 @@ const background = document.querySelector('.dropdownBackground');
 const title = document.querySelector('.title');
 const logo = document.querySelector('.logo');
 const searchGlobo = document.querySelector('.searchGlobo');
-const upDown = document.querySelectorAll('.highlights');
 const searchWeb = document.querySelector('.searchWeb');
 const divSugestao = document.querySelector('.suggestions');
-let seletedIndex = 0;
-// const listaSemMarcação = mock.suggestions.map((item) => `- ${item}`).join('\n');
+let selectedIndex = 0;
+// let stopDuplicate = false;
 
 function acionaInput() {
   fieldset.classList.add('click_input');
-  background.classList.add('open');
 }
 
 function retiraInput() {
@@ -78,61 +76,104 @@ function getResultsSearch(palavra) {
   return result;
 }
 
-function updateMenuAppearance() {
-  upDown.forEach((item, index) => {
-    if (index === seletedIndex) {
-      item.classList.add('selected');
-    } else {
-      item.classList.remove('selected');
-    }
+function suggestionsOnTheScreen() {
+  const frases = `${getResultsSearch(formatarPalavra(input.value)).suggestion}`;
+  const elementos = frases.split(',');
+  const lista = document.createElement('div');
+  // let listaHTML = '<ul>';
+  elementos.forEach((elemento) => {
+    let li = document.createElement('div');
+    li.classList.add('point');
+    li.textContent = elemento;
+    lista.appendChild(li);
+    // listaHTML += elemento;
+    console.log(lista);
   });
+  // listaHTML += '</ul>';
+  divSugestao.appendChild(lista);
+}
+
+function screenResults() {
+  // getResultsSearch(formatarPalavra(input.value));
+  getResultsSearch(formatarPalavra(input.value));
+  title.innerHTML = getResultsSearch(formatarPalavra(input.value)).highlight.title;
+  logo.src = getResultsSearch(formatarPalavra(input.value)).highlight.logo;
+  searchGlobo.innerHTML = `buscar ${input.value} na Globo.com`;
+  searchWeb.innerHTML = `buscar ${input.value} na Web`;
+  suggestionsOnTheScreen();
 }
 
 input.addEventListener('keyup', debounce(() => {
   if (input.value.length >= 1) {
-    getResultsSearch(formatarPalavra(input.value));
-    console.log(getResultsSearch(formatarPalavra(input.value)));
-    title.innerHTML = getResultsSearch(formatarPalavra(input.value)).highlight.title;
-    logo.src = getResultsSearch(formatarPalavra(input.value)).highlight.logo;
-    searchGlobo.innerHTML = `buscar ${input.value} na Globo.com`;
-    searchWeb.innerHTML = `buscar ${input.value} na Web`;
-    const frases = `${getResultsSearch(formatarPalavra(input.value)).suggestion}`;
-    const elementos = frases.split(',');
-    let listaHTML = '<ul>';
-    elementos.forEach((elemento) => {
-      listaHTML += `<li class="suggestions">${elemento} <br> </li`;
-    });
-    listaHTML += '</ul>';
-    divSugestao.innerHTML = listaHTML;
+    acionaInput();
+    screenResults();
+    /* if (stopDuplicate === false) {
+      screenResults();
+      suggestionsOnTheScreen();
+      stopDuplicate = true;
+      if (input.value === '') {
+        stopDuplicate = false;
+        screenResults();
+        suggestionsOnTheScreen();
+      }
+    } else {
+      !suggestionsOnTheScreen();
+      screenResults();
+    } */
   }
-  input.addEventListener('keypress', (event) => {
-    if (event.key === 'Enter') {
-      event.preventDefault();
-      console.log(event);
-      //
-    }
-  });
+  if (input.value === '') {
+    retiraInput();
+  }
 }, 500));
 
 document.addEventListener('keydown', (event) => {
+  const upDown = document.querySelectorAll('.point');
+  background.classList.add('open');
+  function updateMenuAppearance() {
+    upDown.forEach((item, index) => {
+      if (index === selectedIndex) {
+        item.classList.add('selected');
+      } else {
+        item.classList.remove('selected');
+      }
+    });
+  }
   // eslint-disable-next-line default-case
   switch (event.key) {
     case 'ArrowUp':
-      seletedIndex = Math.max(0, seletedIndex - 1);
+      selectedIndex = Math.max(0, selectedIndex - 1);
+      divSugestao.innerHTML = '';
+      updateMenuAppearance();
       break;
     case 'ArrowDown':
-      seletedIndex = Math.min(upDown.length - 1, seletedIndex + 1);
+      selectedIndex = Math.min(upDown.length - 1, selectedIndex + 1);
+      divSugestao.innerHTML = '';
+      updateMenuAppearance();
+      break;
+    case 'ArrowLeft':
+      divSugestao.innerHTML = '';
+      break;
+    case 'ArrowRight':
+      divSugestao.innerHTML = '';
       break;
     case 'Enter':
       upDown.forEach((item) => {
         if (item === title) {
+          event.preventDefault();
           window.location.href = getResultsSearch(formatarPalavra(input.value)).highlight.url;
+          console.log(window.location.url);
         } else {
           console.log('not title');
         }
       });
-      upDown[seletedIndex].click();
+      upDown[selectedIndex].click();
+      break;
+    case 'Backspace':
+      title.innerHTML = '';
+      logo.src = '';
+      searchGlobo.innerHTML = '';
+      searchWeb.innerHTML = '';
+      divSugestao.innerHTML = '';
       break;
   }
-  updateMenuAppearance();
 });
